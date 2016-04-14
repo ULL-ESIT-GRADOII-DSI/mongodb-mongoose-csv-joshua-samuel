@@ -34,14 +34,14 @@ const handleFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
 
- XXX XXXXX X XXXXXXXXXXXXXXXXX
+  var files = evt.target.files;
 
-  XXX XXXXXX X XXX XXXXXXXXXXXXX
-  XXXXXXXXXXXXX X XXX XX X
+  var reader = new FileReader();
+  reader.onload = (x) => {
+    $("#original").value(x.target.result);
+  };
 
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  XX
-  XXXXXXXXXXXXXXXXXXXXXXXXXXX
+  reader.readAsText(files[0]);
 }
 
 /* Drag and drop: el fichero arrastrado se vuelca en la textarea de entrada */
