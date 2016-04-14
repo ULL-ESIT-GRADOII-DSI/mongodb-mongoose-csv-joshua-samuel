@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Comma Separated Values Testing</title>
+  <link rel="stylesheet" media="all" href="vendor/mocha.css">
+</head>
+<body>
+  <div id="mocha"><p><a href=".">Index</a></p></div>
+  <div id="messages"></div>
+  <div id="fixtures"></div>
+  <script src="vendor/mocha.js"></script>
+  <script src="vendor/chai.js"></script>
+  <script src="vendor/blanket.js" data-cover-adapter="vendor/mocha-blanket.js" data-cover-flags="debug"></script>
+  <script type="text/javascript" src="assets/js/csv.js" data-cover></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="assets/js/test_csv.js"></script>
+  <script>mocha.run();</script>
+</body>
+</html>
