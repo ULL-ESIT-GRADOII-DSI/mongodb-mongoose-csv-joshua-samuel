@@ -32,5 +32,21 @@
     "node": "4.2.1"
   },
   "devDependencies": {
+    "gulp-gh-pages": "*",
+    "chai": "~2.0.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-minifier": "^0.1.3",
+    "karma": "*",
+    "karma-chai": "*",
+    "karma-chrome-launcher": "*",
+    "karma-safari-launcher": "*",
+    "karma-firefox-launcher": "*",
+    "karma-phantomjs-launcher": "*",
+    "karma-html2js-preprocessor": "*",
+    "karma-mocha": "*",
+    "mocha": "*",
+    "ejs": "2.3.3",
+    "express": "4.13.3"
   }
 }
