@@ -15,12 +15,12 @@ app.use(express.static(__dirname + '/public'));
 
 const calculate = require('XXXXXXXXXXXXXXXXXX');
 
-app.get('/', (request, response) => {     
-  XXXXXXXXXXXXXXXXXXXXXXXX X XXXXXX XXXX XXXXXXXXX XXX
+app.get('/', (request, response) => {
+  res.render('index');
 });
 
 app.get('/csv', (request, response) => {
-  XXXXXXXXXXXXXXX XXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX XXX
+  res.render('csv');
 });
 
 app.listen(app.get('port'), () => {
