@@ -2,24 +2,24 @@
   "name": "PL_practica2",
   "version": "1.0.0",
   "description": "Analizador de cadenas csv usando AJAX",
-  "main": "csv.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "firefox tests/index.html"
   },
   "repository": {
     "type": "git",
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-joshua-samuel"
   },
   "keywords": [
     "csv"
   ],
-  "author": XXXXXXXXXX
-  "contributors": [],
+  "author": "Samuel Ramos Barroso y Joshua Pérez",
   "license": "ISC",
   "bugs": {
-    "url": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    "url": "https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-joshua-samuel"
   },
-  "homepage": XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+  "homepage": "",
   "dependencies": {
 	"jquery": "*",
     "underscore": "*",
@@ -29,7 +29,7 @@
     "express-ejs-layouts": "~1.1.0"
   },
   "engines": {
-    "node": XXXXX
+    "node": "4.2.1"
   },
   "devDependencies": {
   }
