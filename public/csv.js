@@ -49,15 +49,15 @@ const handleDragFileSelect = (evt) => {
   evt.stopPropagation();
   evt.preventDefault();
 
-  XXX XXXXX X XXXXXXXXXXXXXXXXXXXXXXX XX XXXXXXXX XXXXXXX
+  var files = evt.dataTransfer.files;
 
-  XXX XXXXXX X XXX XXXXXXXXXXXXX
-  XXXXXXXXXXXXX X XXX XX X
+  var reader = new FileReader();
+  reader.onload = (e) => {
 
-    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    XXXXXXXXXXXXXXXXXXXXXXXXXXX X XXXXXXXX
-  XX
-  XXXXXXXXXXXXXXXXXXXXXXXXXXX
+    $("#original").val(e.target.result);
+    evt.target.style.background = "white";
+  };
+  reader.readAsText(files[0])
 }
 
 const handleDragOver = (evt) => {
