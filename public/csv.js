@@ -4,7 +4,7 @@
 
 const resultTemplate = `
 <div class="contenido">
-      <table class="center" id="result">
+      <table class="table" id="result">
           <% _.each(rows, (row) => { %>
           <tr class="<%=row.type%>">
               <% _.each(row.items, (name) =>{ %>

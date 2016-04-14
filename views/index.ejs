@@ -1,49 +1,65 @@
-  <div class="contenido_total">
-    <div class="titulo_practica">
-      <h1 align="center">
-        <font color="blue">Comma Separated Values (CSV) Analyzer with Ajax</font>
-      </h1>
-      <hr>
-    </div>
-    <div class="contenido">
-      <div class="container">
-        
-      <div class="row">
-        <div class="twelve columns">
-      <table class="center" id="input">
-        <tr><th>Escriba aquí una entrada CSV o bien</th></tr>
-        <tr><th>Arrastre un fichero CSV hasta la zona de entrada</th></tr>
-        <tr>
-          <th>
-            <textarea class = "drop_zone" autofocus="" cols = "80" rows = "5" id="original"></textarea>
-          </th>
-          <th>
-            <button type="button" id="parse"> Analizar!</button>
-          </th>
-        </tr>
-        <tr>
-        </tr>
-        <tr>
-          <th>
-            <div class="example">
-              Click para cargar ejemplos:
-              <button class ="example" type="button">input</button>
-              <button class ="example" type="button">input2</button>
-              <button class ="example" type="button">input3</button>
-            </div>
-          </th>
-        </tr>
-        <tr>
-          <th>
-              Cargar archivo: 
-              <input type="file" class="inputfile" />
-          </th>
-        </tr>
-      </table>
+<header>
+  <h1>CSV con AJAX</h1>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row" id="texto">
+          <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <p>Escriba aquí una entrada CSV o bien arrastre un fichero CSV hasta la zona de entrada</p>
+          <textarea class="drop_zone" rows="5" cols="50" id="original"></textarea>
+        </div>
+        <div class="col-md-4"></div>
+
+      </div>
+
+      <div class="row" id="botones">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4" id="linea">
+          <button class="btn btn-default" type="button" id="parse"> Analizar!</button>
+          <span class="example">
+            <button class="example btn btn-default" type="button">input</button>
+            <button class="example btn btn-default" type="button">input2</button>
+            <button class="example btn btn-default" type="button">input3</button>
+          </span>
+        </div>
+        <div class="col-md-4">
         </div>
       </div>
-      <div class="output" id="finaltable">
-      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" id="seleccion">
+          <p>Cargar archivo:</p>
+          <input type="file" class="inputfile" /></div>
+
+      <div class="col-md-4"></div>
+  </div>
+      <div class="row" id="salida">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="output" id="finaltable"></div>
+        </div>
+        <div class="col-md-4"></div>
       </div>
     </div>
   </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-joshua-samuel">Repositorio del código</a>
+      </div>
+      <div class="col-md-4">
+        <a href="http://losnen.github.io/">Web: Samuel Ramos Barroso</a>
+      </div>
+      <div class="col-md-4">
+        <a href="http://joshuape.github.io/">Web: Joshua Perez</a>
+      </div>
+    </div>
+  </div>
+</footer>
