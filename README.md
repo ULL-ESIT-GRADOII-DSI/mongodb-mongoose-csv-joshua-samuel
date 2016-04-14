@@ -1,5 +1,29 @@
 # Práctica 2: Comma separated values (CSV) with AJAX
 
+#ETSII ULL Grado de Informatica
+
+For more information look at:
+
+
+**Dirección del campus virtual**
+
+* [Enunciado de la práctica](https://campusvirtual.ull.es/1516/mod/page/view.php?id=189370)
+* [Gitbook con el enunciado](https://casianorodriguezleon.gitbooks.io/pl1516/content/practicas/csv.html)
+
+**Repositorio GitHuB**
+
+* [FORK](https://github.com/Losnen/ajax-ecma6-ficheros-joshua-samuel)
+* [Repositorio de entrega](https://github.com/ULL-ESIT-GRADOII-DSI/ajax-ecma6-ficheros-joshua-samuel)
+
+**Página de la práctica**
+
+* [Despliegue en Heroku](https://practica-dsi-csv.herokuapp.com/)
+
+**Página del autor**
+
+* [Samuel Ramos Barroso](http://losnen.github.io/)
+* [Joshua Pérez](http://joshuape.github.io/)
+
 ## jQuery.get( url [, data ] [, success ] [, dataType ] )
 * url
   * Type: String
