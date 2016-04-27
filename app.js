@@ -30,7 +30,7 @@ mongoose.connect('mongodb://localhost/data');
 
 const fichero= require('./mdschema');
 
-app.get('/mongo/:entrada', function(req, res) {
+app.get('/ficheros/:entrada', function(req, res) {
     fichero.find({}, function(err, docs) {
         if (err)
             return err;
