@@ -83,46 +83,14 @@ $(document).ready(() => {
     });
     
     
-    $("#guardar").click( () => {
-      $.get("/gua",
-        { textocsv: original.value,
-        name: nombre.value},
-        'json'
-      );
+    $("#guardar").click(() => {
+      if (window.localStorage) localStorage.original = original.value;
+        $.get("/ficheros/" + $("#nombrefich").val(), {
+          content: $("#original").val()
+      });
     });
    
-    $("#1").click( () => {
-      $.get("/descfich",
-        { textocsv: 1 },
-        fillBd,
-        'json'
-      );
-   });
-   
-   $("#2").click( () => {
-      $.get("/descfich",
-        { textocsv: 2 },
-        fillBd,
-        'json'
-      );
-   });
-   
-   $("#3").click( () => {
-      $.get("/descfich",
-        { textocsv: 3 },
-        fillBd,
-        'json'
-      );
-   });
-   
-   $("#4").click( () => {
-      $.get("descfich",
-        { textocsv: 4 },
-        fillBd,
-        'json'
-      );
-   });
-   
+    
 
     
     

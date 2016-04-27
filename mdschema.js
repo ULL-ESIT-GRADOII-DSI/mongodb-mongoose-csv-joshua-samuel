@@ -1,6 +1,16 @@
+(function() {
+  "use strict";
+  const util = require('util');
+  const mongoose = require('mongoose');
+  var Schema = mongoose.Schema;
+
+
 var csvSchema = new Schema({
-  name: String,
-  text: String
+  "name": {
+            type: String,
+            unique: true
+        },
+  "text": String
 });
 
-
+})();
