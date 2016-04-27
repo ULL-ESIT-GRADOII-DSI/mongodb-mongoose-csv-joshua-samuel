@@ -81,6 +81,51 @@ $(document).ready(() => {
           'json'
         );
     });
+    
+    
+    $("#guardar").click( () => {
+      $.get("/gua",
+        { textocsv: original.value,
+        name: nombre.value},
+        'json'
+      );
+    });
+   
+    $("#1").click( () => {
+      $.get("/descfich",
+        { textocsv: 1 },
+        fillBd,
+        'json'
+      );
+   });
+   
+   $("#2").click( () => {
+      $.get("/descfich",
+        { textocsv: 2 },
+        fillBd,
+        'json'
+      );
+   });
+   
+   $("#3").click( () => {
+      $.get("/descfich",
+        { textocsv: 3 },
+        fillBd,
+        'json'
+      );
+   });
+   
+   $("#4").click( () => {
+      $.get("descfich",
+        { textocsv: 4 },
+        fillBd,
+        'json'
+      );
+   });
+   
+
+    
+    
    /* botones para rellenar el textarea */
    $('button.example').each((index, element) => {
      $(element).click(() => {

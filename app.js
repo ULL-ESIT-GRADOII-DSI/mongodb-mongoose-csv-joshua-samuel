@@ -13,7 +13,6 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 app.use(express.static(__dirname + '/public'));
-var Card = mongoose.model("Card", csvSchema);
 
 const calculate = require('./models/calculate');
 
@@ -23,6 +22,14 @@ app.get('/', (request, response) => {
 
 app.get('/csv', (request, response) => {
   response.send({"rows" : calculate(request.query.textocsv)});
+});
+
+const mongoose = require("mongoose");
+
+mongoose.connect('mongodb://localhost/data');
+
+app.get('/descfich', (request, response) => {
+
 });
 
 app.listen(app.get('port'), () => {
