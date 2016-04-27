@@ -28,7 +28,7 @@ const mongoose = require("mongoose");
 
 mongoose.connect('mongodb://localhost/data');
 
-const fichero= require('./mdschema');
+const fichero = require('./mdschema');
 
 app.get('/ficheros/:entrada', function(req, res) {
     fichero.find({}, function(err, docs) {
@@ -39,7 +39,7 @@ app.get('/ficheros/:entrada', function(req, res) {
         }
     });
     let fichent = new fichero({
-        "name": req.params.entrada,
+        "name": req.entrada,
         "text": req.query.content
     });
 
