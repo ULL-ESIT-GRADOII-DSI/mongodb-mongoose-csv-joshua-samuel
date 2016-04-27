@@ -30,7 +30,7 @@ mongoose.connect('mongodb://localhost/data');
 
 const fichero= require('./mdschema');
 
-app.get('/mongo/:entrada', function(req, res) {
+app.get('/ficheros/:entrada', function(req, res) {
     fichero.find({}, function(err, docs) {
         if (err)
             return err;
@@ -58,6 +58,14 @@ app.get('/descfich', function (request, response ){
       return err;
       response.send(data);
   });
+});
+
+app.get('/fichnombre', function(req, res) {
+    fichero.find({
+        name: req.query.name
+    }, function(err, docs) {
+        res.send(docs);
+    });
 });
 
 app.listen(app.get('port'), () => {

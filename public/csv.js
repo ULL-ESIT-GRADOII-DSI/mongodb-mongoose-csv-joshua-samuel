@@ -89,17 +89,18 @@ $(document).ready(() => {
           content: $("#original").val()
       });
     });
-   
-    
-
-    
     
    /* botones para rellenar el textarea */
-   $('button.example').each((index, element) => {
-     $(element).click(() => {
-        dump(`${$(element).text()}.txt`);
-      });
-   });
+   $('button.example').each((_, y) => {
+            $(y).click(() => {
+                $.get("/fichnombre", {
+                        name: $(y).text()
+                    },
+                    (data) => {
+                        $("#original").val(data[0].content);
+                    });
+            });
+        });
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
     let dropZone = $('.drop_zone')[0];
