@@ -1,5 +1,5 @@
 var csvSchema = new Schema({
-  id:  Number,
+  name: String,
   text: String
 });
 

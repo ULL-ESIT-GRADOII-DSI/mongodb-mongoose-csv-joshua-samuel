@@ -28,8 +28,14 @@ const mongoose = require("mongoose");
 
 mongoose.connect('mongodb://localhost/data');
 
-app.get('/descfich', (request, response) => {
+const fichero= require('./mdschema');
 
+app.get('/descfich', function (request, response ){
+  fichero.find({}, function(err,data){
+    if(err)
+      return err;
+      response.send(data);
+  });
 });
 
 app.listen(app.get('port'), () => {
