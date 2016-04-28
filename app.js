@@ -61,11 +61,14 @@ app.get('/descfich', function (request, response ){
 });
 
 app.get('/fichnombre', function(req, res) {
+    
     fichero.find({
         name: req.query.name
     }, function(err, docs) {
+        console.log(docs);
         res.send(docs);
     });
+    
 });
 
 app.listen(app.get('port'), () => {

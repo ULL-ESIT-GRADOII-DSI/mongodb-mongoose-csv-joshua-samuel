@@ -17,19 +17,19 @@ var SchemaFichero = new Schema({
     /*Creamos los tres ejemplos iniciales*/
     let fichero1 = new Fichero({
         "name": "Fichero1.csv",
-        "content": `"producto",           "precio"
+        "text": `"producto",           "precio"
                     "camisa",             "4,3"
                     "libro de O\\"Reilly", "7,2"`
     });
     let fichero2 = new Fichero({
         "name": "Fichero2.csv",
-        "content": `"producto",           "precio"  "fecha"
+        "text": `"producto",           "precio"  "fecha"
                     "camisa",             "4,3",    "14/01"
                     "libro de O\\"Reilly", "7,2"     "13/02"`
     });
     let fichero3 = new Fichero({
         "name": "Fichero3.csv",
-        "content": `"edad",  "sueldo",  "peso"
+        "text": `"edad",  "sueldo",  "peso"
                     ,         "6000€",  "90Kg"
                     47,       "3000€",  "100Kg"`
 

@@ -86,7 +86,7 @@ $(document).ready(() => {
     $("#guardar").click(() => {
       if (window.localStorage) localStorage.original = original.value;
         $.get("/ficheros/" + $("#nombrefich").val(), {
-          content: $("#original").val()
+          text: $("#original").val()
       });
     });
     
@@ -97,7 +97,7 @@ $(document).ready(() => {
           name: $(y).text()
         },
         (data) => {
-          $("#original").val(data[0].content);
+          $("#original").val(data[0].text);
         });
       });
   });
