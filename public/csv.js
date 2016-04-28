@@ -81,12 +81,38 @@ $(document).ready(() => {
           'json'
         );
     });
-   /* botones para rellenar el textarea */
-   $('button.example').each((index, element) => {
-     $(element).click(() => {
-        dump(`${$(element).text()}.txt`);
+    
+    
+    $("#guardar").click(() => {
+      if (window.localStorage) localStorage.original = original.value;
+        $.get("/ficheros/" + $("#nombrefich").val(), {
+          text: $("#original").val()
       });
-   });
+    });
+    
+   /* botones para rellenar el textarea */
+    $('button.example').each((_, y) => {
+      $(y).click(() => {
+        $.get("/fichnombre", {
+          name: $(y).text()
+        },
+        (data) => {
+          $("#original").val(data[0].text);
+        });
+      });
+  });
+  
+  $.get("/descfich", {}, (data) => {
+    for (var i = 0; i < 4; i++) {
+      if (data[i]) {
+        $('button.example').get(i).className = "example";
+        $('button.example').get(i).textContent = data[i].name;
+      }     
+    }
+});
+        
+        
+        
     // Setup the drag and drop listeners.
     //var dropZone = document.getElementsByClassName('drop_zone')[0];
     let dropZone = $('.drop_zone')[0];

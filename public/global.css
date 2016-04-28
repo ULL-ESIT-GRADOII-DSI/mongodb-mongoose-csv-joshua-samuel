@@ -6,6 +6,11 @@
 	margin-top: 40px;
 
 }
+
+.hidden {
+  display: none;
+}
+
 textarea{
 	border: 2px solid black;
 }
